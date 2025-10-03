@@ -49,12 +49,14 @@ const Header = () => {
 
           {/* Cart & Mobile Menu Button */}
           <div className="flex items-center space-x-4">
-            <button className="relative">
-              <ShoppingCart className="h-5 w-5" />
-              <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                0
-              </span>
-            </button>
+            <Link href="/cart">
+              <button className="relative">
+                <ShoppingCart className="h-5 w-5" />
+                <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                  0
+                </span>
+              </button>
+            </Link>
 
             {/* Mobile Menu Toggle */}
             <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
